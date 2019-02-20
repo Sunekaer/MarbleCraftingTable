@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "mm",
+    "mm"
+  ],
+  "key": {
+    "m": {
+      "item": "chisel:raw_marble"
+    }
+  },
+  "result": {
+    "item": "marblecraftingtable:marble_crafting_table",
+    "count": 1
+  }
+}

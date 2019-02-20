@@ -1,5 +1,5 @@
 #Blocks
-tile.yamda.portal.name=Mining Dim Portal
+tile.marblecraftingtable.marble_crafting_table.name=Marble Crafting table
 
 #Creative Tab
-itemGroup.yamda=YAMDA
+itemGroup.marblecraftingtable=Marble Crafting table

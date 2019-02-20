@@ -8,7 +8,6 @@ import net.minecraft.world.World;
 
 public class ContainerCT extends Container {
 
-    private TileMarbleCT te;
     private InventoryCT craftMatrix;
     private InventoryCraftResult craftResult = new InventoryCraftResult();
     private EntityPlayer player;

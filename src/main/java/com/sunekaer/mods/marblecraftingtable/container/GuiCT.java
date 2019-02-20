@@ -18,13 +18,6 @@ public class GuiCT extends GuiContainer{
     }
 
     @Override
-    public void drawScreen(int mouseX, int mouseY, float partialTicks) {
-        drawDefaultBackground();
-        super.drawScreen(mouseX, mouseY, partialTicks);
-        renderHoveredToolTip(mouseX, mouseY);
-    }
-
-    @Override
     protected void drawGuiContainerBackgroundLayer(float partialTicks, int mouseX, int mouseY) {
         GL11.glColor4f(1.0F, 1.0F, 1.0F, 1.0F);
         int i = guiLeft;
@@ -32,4 +25,13 @@ public class GuiCT extends GuiContainer{
         mc.renderEngine.bindTexture(new ResourceLocation("minecraft", "textures/gui/container/crafting_table.png"));
         drawTexturedModalRect(i, j, 0, 0, xSize, ySize);
     }
+
+    @Override
+    public void drawScreen(int mouseX, int mouseY, float partialTicks) {
+        drawDefaultBackground();
+        super.drawScreen(mouseX, mouseY, partialTicks);
+        renderHoveredToolTip(mouseX, mouseY);
+    }
 }
+
+
