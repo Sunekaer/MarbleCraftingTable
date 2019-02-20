@@ -1,12 +1,15 @@
 package com.sunekaer.mods.marblecraftingtable;
 
 import com.sunekaer.mods.marblecraftingtable.block.MarbleCraftingTableBlocks;
+import com.sunekaer.mods.marblecraftingtable.container.GuiHandler;
 import com.sunekaer.mods.marblecraftingtable.item.MarbleCraftingTableItems;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
+import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import net.minecraftforge.fml.common.network.NetworkRegistry;
 
 @Mod(
         modid = MarbleCraftingTable.MOD_ID,
@@ -30,4 +33,9 @@ public class MarbleCraftingTable {
 
     @Mod.Instance(MarbleCraftingTable.MOD_ID)
     public static MarbleCraftingTable instance;
+
+    @Mod.EventHandler
+    public void postInit(FMLInitializationEvent event) {
+        NetworkRegistry.INSTANCE.registerGuiHandler(MarbleCraftingTable.instance, new GuiHandler());
+    }
 }

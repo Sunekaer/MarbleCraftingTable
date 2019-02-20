@@ -57,9 +57,4 @@ public class MarbleCraftingTableEventHandler {
         ModelLoader.setCustomModelResourceLocation(MarbleCraftingTableItems.MARBLE_CRAFTING_TABLE, 0, new ModelResourceLocation(MarbleCraftingTableItems.MARBLE_CRAFTING_TABLE.getRegistryName(), "inventory"));
 
     }
-
-    @Mod.EventHandler
-    public void postInit(FMLInitializationEvent event) {
-        NetworkRegistry.INSTANCE.registerGuiHandler(MarbleCraftingTable.instance, new GuiHandler());
-    }
 }
