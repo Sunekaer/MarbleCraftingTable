@@ -1,0 +1,16 @@
+[
+{
+  "modid": "marblecraftingtable",
+  "name": "Marble Crafting Table",
+  "description": "Marble Crafting Table",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "https://minecraft.curseforge.com/projects/marblecraftingtable",
+  "updateUrl": "",
+  "authorList": ["Sunekaer"],
+  "credits": "",
+  "logoFile": "assets/marblecraftingtable/textures/logo.png",
+  "screenshots": [],
+  "dependencies": []
+}
+]

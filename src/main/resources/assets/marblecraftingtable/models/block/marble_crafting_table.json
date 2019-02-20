@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "particle": "marblecraftingtable:blocks/marble_crafting_table_front",
+    "down": "marblecraftingtable:blocks/marble_crafting_table_bottom",
+    "up": "marblecraftingtable:blocks/marble_crafting_table_top",
+    "north": "marblecraftingtable:blocks/marble_crafting_table_front",
+    "east": "marblecraftingtable:blocks/marble_crafting_table_side",
+    "south": "marblecraftingtable:blocks/marble_crafting_table_side",
+    "west": "marblecraftingtable:blocks/marble_crafting_table_front"
+  }
+}
