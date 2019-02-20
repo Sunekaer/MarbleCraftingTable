@@ -4,9 +4,11 @@
     "mm",
     "mm"
   ],
+  "type": "forge:ore_shaped",
   "key": {
     "m": {
-      "item": "chisel:raw_marble"
+      "type": "forge:ore_dict",
+      "ore": "stoneMarble"
     }
   },
   "result": {
