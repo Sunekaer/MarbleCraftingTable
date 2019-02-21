@@ -2,7 +2,6 @@ package com.sunekaer.mods.marblecraftingtable;
 
 import com.sunekaer.mods.marblecraftingtable.block.BlockMarbleCT;
 import com.sunekaer.mods.marblecraftingtable.block.MarbleCraftingTableBlocks;
-import com.sunekaer.mods.marblecraftingtable.container.GuiHandler;
 import com.sunekaer.mods.marblecraftingtable.item.MarbleCraftingTableItems;
 import com.sunekaer.mods.marblecraftingtable.tile.TileMarbleCT;
 import net.minecraft.block.Block;
@@ -14,9 +13,7 @@ import net.minecraftforge.client.event.ModelRegistryEvent;
 import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
-import net.minecraftforge.fml.common.network.NetworkRegistry;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
 @Mod.EventBusSubscriber(modid = MarbleCraftingTable.MOD_ID)
@@ -54,7 +51,7 @@ public class MarbleCraftingTableEventHandler {
     @SubscribeEvent
     public static void registerModels(ModelRegistryEvent event)
     {
-        ModelLoader.setCustomModelResourceLocation(MarbleCraftingTableItems.MARBLE_CRAFTING_TABLE, 0, new ModelResourceLocation(MarbleCraftingTableItems.MARBLE_CRAFTING_TABLE.getRegistryName(), "inventory"));
+        ModelLoader.setCustomModelResourceLocation(MarbleCraftingTableItems.MARBLE_CRAFTING_TABLE, 0, new ModelResourceLocation(MarbleCraftingTableItems.MARBLE_CRAFTING_TABLE.getRegistryName(), "normal"));
 
     }
 }
