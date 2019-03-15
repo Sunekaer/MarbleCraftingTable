@@ -1,4 +1,4 @@
-package com.sunekaer.mods.marblecraftingtable.jei;
+package com.sunekaer.mods.marblecraftingtable.integration;
 
 import com.sunekaer.mods.marblecraftingtable.block.MarbleCraftingTableBlocks;
 import com.sunekaer.mods.marblecraftingtable.container.ContainerCT;
