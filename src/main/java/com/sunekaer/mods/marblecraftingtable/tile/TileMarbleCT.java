@@ -1,5 +1,6 @@
 package com.sunekaer.mods.marblecraftingtable.tile;
 
+import com.sunekaer.mods.marblecraftingtable.container.InventoryCT;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.IInventory;
 import net.minecraft.inventory.ItemStackHelper;
@@ -10,9 +11,27 @@ import net.minecraft.network.play.server.SPacketUpdateTileEntity;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.NonNullList;
 
+import java.util.HashSet;
+import java.util.Set;
+
 public class TileMarbleCT extends TileEntity implements IInventory {
 
     private NonNullList<ItemStack> inv = NonNullList.withSize(9, ItemStack.EMPTY);
+    private Set<InventoryCT> invs = new HashSet<>();
+
+    public void onOpen(InventoryCT inv) {
+        this.invs.add(inv);
+    }
+
+    public void onClose(InventoryCT inv) {
+        this.invs.remove(inv);
+    }
+
+    public void updateInvs() {
+        for(InventoryCT inv : this.invs) {
+            inv.changed();
+        }
+    }
 
     @Override
     public NBTTagCompound getUpdateTag() {
@@ -38,6 +57,7 @@ public class TileMarbleCT extends TileEntity implements IInventory {
         super.readFromNBT(compound);
         inv = NonNullList.<ItemStack>withSize(getSizeInventory(), ItemStack.EMPTY);
         ItemStackHelper.loadAllItems(compound, inv);
+        updateInvs();
     }
 
     @Override
@@ -99,7 +119,7 @@ public class TileMarbleCT extends TileEntity implements IInventory {
 
     @Override
     public boolean isUsableByPlayer(EntityPlayer player) {
-        return true;
+        return getWorld().getTileEntity(getPos()) == this && player.getDistanceSq(getPos().getX() + .5, getPos().getY() + .5, getPos().getZ() + .5) <= 64;
     }
 
     @Override
